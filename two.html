@@ -1,0 +1,110 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Matheus Vanilla Tilt.js</title>
+  </head>
+  <body>
+    <div class="container">
+      
+      <!-- Inicia o primeiro box -->
+      <div class="box" data-tilt>
+        <div class="imgBx">
+          <img src="https://cdn.pixabay.com/photo/2016/11/19/11/37/automobile-1838782__340.jpg" alt="Fusca" title="Fusca">
+        </div>
+        <div class="contentBx">
+          <h2> 1º Efeito | Vanilla Tilt</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor luctus nisl ut ultrices. Suspendisse ornare dui a magna pretium. Praesent at ipsum enim.</p>
+      </div>
+     </div>
+      
+    <!-- Finaliza com o 2º box -->
+     <div class="box" data-tilt>
+        <div class="imgBx">
+          <img src="https://cdn.pixabay.com/photo/2017/11/09/01/49/ferrari-458-spider-2932191__340.jpg" alt="Ferrari" title="Ferrari">
+        </div>
+        <div class="contentBx">
+          <h2>2º Efeito | Vanilla.js</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor luctus nisl ut ultrices. Suspendisse ornare dui a magna pretium. Praesent at ipsum enim.</p>
+      </div>
+     </div>
+    </div>
+    
+<!-- === Minha abinha do Siga no GitHub === -->
+  
+    
+ <!-- === Bora carregar os Js manolo! === -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript" src="https://www.matheusfreitas.com/prointer/js/tilt.jquery.js"></script>
+  </body>
+  
+
+
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: 35% 0 50%;
+  background: #fff;
+  transform-style: preserve-3d;
+}
+
+.container .box:hover {
+  box-shadow: 3px 50px 20px 12px rgba(0, 0, 0, 0.37);
+}
+
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .box .contentBx {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  right: 50px;
+  background: #fff;
+  transform: translateZ(20px) scaleY(0);
+  padding: 40px 25px;
+  transform-origin: top;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+
+.container .box:hover .contentBx {
+  transform: translateZ(20px) scaleY(1);
+  box-shadow: -5px 7px 12px 1px rgba(0, 0, 0, 0.17);
+}
+  </style>
+
+
+<script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400
+	});
+</script>
